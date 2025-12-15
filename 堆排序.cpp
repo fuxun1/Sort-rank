@@ -57,7 +57,7 @@ void swap(RedType &a,RedType &b){
 //堆排序
 void HeapSort(HeapType &H){
     //对顺序表H进行堆排序
-    for(int i=H.length/2;i>0;--i){
+    for(int i=H.length/2;i>0;--i){   //从第一个非叶子结点开始
         HeapAdjust(H,i,H.length);
     }
 
@@ -86,5 +86,6 @@ int main(){
 
     return 0;
 }
+
 
 
