@@ -34,7 +34,7 @@ Status InitSqTable(HeapType &H){
 //筛选的调整过程
 void HeapAdjust(HeapType &H,int s,int m){   //s是待调整节点下标,m是最后一个元素下标
     RedType rc=H.r[s];
-    for(int j=2*s;j<=m;++j){
+    for(int j=2*s;j<=m;j*=2){
         if(j<m&&H.r[j].key<H.r[j+1].key){
             ++j;
         }
@@ -86,4 +86,5 @@ int main(){
 
     return 0;
 }
+
 
